@@ -11,7 +11,7 @@ To do this programmatically via PAC CLI (this is how GitHub Copilot and Claude C
 3. Run `pac env update-settings --name blockedattachments --value "<UPDATED_LIST_WITHOUT_JS>"` to update with the new list, this time with `js` removed.
 
 ## Add powerpages.config.json
-You must add a file named `powerpages.config.json` to your app with the following content as an example:
+You can add a file named `powerpages.config.json` to your app with the following content as an example:
 ```
 {
   "siteName": "My Cool Site",
@@ -20,7 +20,11 @@ You must add a file named `powerpages.config.json` to your app with the followin
 }
 ```
 
+**NOTE: You do not HAVE to add `powerpages.config.json`.** You can specify the `compiledPath` and `siteName` parameters during the `pag pages upload-code-site` command, seen below. 
+
 ## Deploying to Power Pages via PAC CLI
+If you *did* add `powerpages.config.json`, you must only specify the `rootPath` parameter (it will read the `compiledPath` and `siteName` parameters from the file). If you provide it both in the file and in the PAC CLI command, the PAC CLI command values take precendence.
+
 ```
 pac pages upload-code-site --rootPath "./src/" --compiledPath "./dist/" --siteName "Tims SPA"
 ```
