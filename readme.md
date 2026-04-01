@@ -10,9 +10,19 @@ To do this programmatically via PAC CLI (this is how GitHub Copilot and Claude C
 2. Remove `js` from the semicolon-separated list.
 3. Run `pac env update-settings --name blockedattachments --value "<UPDATED_LIST_WITHOUT_JS>"` to update with the new list, this time with `js` removed.
 
+## Add powerpages.config.json
+You must add a file named `powerpages.config.json` to your app with the following content as an example:
+```
+{
+  "siteName": "My Cool Site",
+  "defaultLandingPage": "index.html",
+  "compiledPath": "dist"
+}
+```
+
 ## Deploying to Power Pages via PAC CLI
 ```
-pac pages upload-code-site --rootPath "./src/" --compiledPath "./dist/" --siteName "Tims SPA"
+pac pages upload-code-site --rootPath "./src/" --compiledPath "./dist/"
 ```
 
 ## Converting a Power Pages Site to Production
