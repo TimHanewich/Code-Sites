@@ -22,7 +22,7 @@ You must add a file named `powerpages.config.json` to your app with the followin
 
 ## Deploying to Power Pages via PAC CLI
 ```
-pac pages upload-code-site --rootPath "./src/" --compiledPath "./dist/"
+pac pages upload-code-site --rootPath "./src/" --compiledPath "./dist/" --siteName "Tims SPA"
 ```
 
 ## Converting a Power Pages Site to Production
