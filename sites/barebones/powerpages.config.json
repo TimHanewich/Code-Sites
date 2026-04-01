@@ -1,0 +1,5 @@
+{
+  "siteName": "Barebones",
+  "defaultLandingPage": "index.html",
+  "compiledPath": "dist"
+}
