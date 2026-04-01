@@ -31,3 +31,10 @@ pac pages upload-code-site --rootPath "./src/" --compiledPath "./dist/" --siteNa
 
 ## Converting a Power Pages Site to Production
 ![prod](https://i.imgur.com/ogNJA4Y.png)
+
+## Availability in GCC
+Power Pages Code Apps ("Single page applications") are confirmed to be working in GCC!
+
+![in GCC](https://i.imgur.com/KO9eMjz.png)
+
+![working](https://i.imgur.com/LL6lTo0.png)
