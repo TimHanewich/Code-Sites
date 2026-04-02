@@ -1,5 +1,6 @@
 ## Learning Resources
 - [Ceating a Single Page Application](https://learn.microsoft.com/en-us/power-pages/configure/create-code-sites#create-and-deploy-an-spa-site)
+- [microsoft/power-platform/skills](https://github.com/microsoft/power-platform-skills)
 - [Nick Doelman Blog](https://readyxrm.blog/2026/01/02/power-pages-bring-your-own-code/)
 
 ## Before Deploying: Enable .js Attachments
@@ -28,6 +29,12 @@ If you *did* add `powerpages.config.json`, you must only specify the `rootPath` 
 ```
 pac pages upload-code-site --rootPath "./src/" --compiledPath "./dist/" --siteName "Tims SPA"
 ```
+
+## Setting up Auth
+The [Power Pages /setup-auth skill](https://github.com/microsoft/power-platform-skills/blob/main/plugins/power-pages/skills/setup-auth/SKILL.md) provides instructions to the AI on how to establish login (authentication). You'll see the skill instructs the AI to **build out custom authentication logic on the fly** (does *not* provide runable code).
+- See full skill instructions [here](https://github.com/microsoft/power-platform-skills/blob/main/plugins/power-pages/skills/setup-auth/SKILL.md)
+- The skill also provides an [authentication-reference.md](https://github.com/microsoft/power-platform-skills/blob/main/plugins/power-pages/skills/setup-auth/references/authentication-reference.md) as an example.
+
 
 ## Converting a Power Pages Site to Production
 ![prod](https://i.imgur.com/ogNJA4Y.png)
