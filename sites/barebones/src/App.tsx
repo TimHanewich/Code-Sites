@@ -1,9 +1,14 @@
 import { useState, useCallback } from 'react'
 import { getRandomFact, type StateFact } from './statesData'
+import { AuthButton } from './components/AuthButton'
+import { RequireAuth } from './components/RequireAuth'
+import { RequireRole } from './components/RequireRole'
+import { useAuth } from './hooks/useAuth'
 import './App.css'
 
 function App() {
   const [fact, setFact] = useState<StateFact>(getRandomFact)
+  const { displayName } = useAuth()
 
   const nextFact = useCallback(() => {
     let next: StateFact
@@ -15,7 +20,15 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="title">U.S. State Facts</h1>
+      <header className="app-header">
+        <h1 className="title">🇺🇸 U.S. State Facts</h1>
+        <AuthButton />
+      </header>
+
+      <RequireAuth fallback={<p className="auth-prompt">Sign in to explore facts about all 50 states!</p>}>
+        <p className="welcome-msg">Welcome, {displayName}!</p>
+      </RequireAuth>
+
       <div className="card">
         <h2 className="state-name">{fact.state}</h2>
         <div className="details">
@@ -27,6 +40,10 @@ function App() {
           Show Another State →
         </button>
       </div>
+
+      <RequireRole roles={['Administrators']} fallback={null}>
+        <div className="admin-badge">🔧 Admin</div>
+      </RequireRole>
     </div>
   )
 }

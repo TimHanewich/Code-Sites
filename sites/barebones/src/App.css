@@ -10,11 +10,32 @@
   font-family: system-ui, -apple-system, sans-serif;
 }
 
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 520px;
+  margin-bottom: 1.5rem;
+}
+
 .title {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin: 0;
   letter-spacing: 0.02em;
   color: white;
+}
+
+.welcome-msg {
+  font-size: 0.95rem;
+  color: #81e6d9;
+  margin: 0 0 1rem;
+}
+
+.auth-prompt {
+  font-size: 0.95rem;
+  color: #a0aec0;
+  margin: 0 0 1rem;
 }
 
 .card {
@@ -91,4 +112,15 @@
 
 .next-btn:active {
   transform: scale(0.97);
+}
+
+.admin-badge {
+  margin-top: 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(245, 101, 101, 0.2);
+  border: 1px solid rgba(245, 101, 101, 0.4);
+  color: #fc8181;
 }
