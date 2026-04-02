@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="title">🇺🇸 U.S. State Facts</h1>
+      <h1 className="title">U.S. State Facts</h1>
       <div className="card">
         <h2 className="state-name">{fact.state}</h2>
         <div className="details">
