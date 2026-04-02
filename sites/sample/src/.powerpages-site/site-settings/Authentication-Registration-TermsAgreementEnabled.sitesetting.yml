@@ -1,0 +1,4 @@
+description: A true or false value. If set to true, the portal will display the terms and conditions of the site. Users must agree to the terms and conditions before they are considered authenticated and can use the site.
+id: 46db51fc-eb3f-4ea2-99f2-e6b51826f3ec
+name: Authentication/Registration/TermsAgreementEnabled
+value: false

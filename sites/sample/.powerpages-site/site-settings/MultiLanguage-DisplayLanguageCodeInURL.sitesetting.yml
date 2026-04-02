@@ -1,0 +1,4 @@
+description: Site setting that determines if the language code is included in the portal URL.
+id: 4c195c64-d8ff-45f5-8094-5ecc5746c3dd
+name: MultiLanguage/DisplayLanguageCodeInURL
+value: False
